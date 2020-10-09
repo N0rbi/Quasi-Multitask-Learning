@@ -19,3 +19,5 @@ k=10 on English pos tagging dataset:
 ```
 python src/qmtl.py --num-out-layers 10 --dynet-mem 1000 --pred_layer 1 --model-to-run all --iters 20 --test data/en_lines-ud-test.conllu --train data/en_lines-ud-train.conllu --dev data/en_lines-ud-dev.conllu --embeds embeddings/polyglot-en.vec.gz --mlp 20 --output my_model --save my_model --dynet-seed 1
 ```
+For Windows users: the .conllu files will be converted to CRLF format, this needs to be converted to LF for the parser to recognise it 
+(one easy way to do it is by changing the file ending in notepad++).
