@@ -19,6 +19,7 @@ k=10 on English pos tagging dataset:
 ```
 python src/qmtl.py --num-out-layers 10 --dynet-mem 1000 --pred_layer 1 --model-to-run all --iters 20 --test data/en_lines-ud-test.conllu --train data/en_lines-ud-train.conllu --dev data/en_lines-ud-dev.conllu --embeds embeddings/polyglot-en.vec.gz --mlp 20 --output my_model --save my_model --dynet-seed 1
 ```
+<<<<<<< HEAD
 
 ## How to interpret
 
@@ -39,3 +40,7 @@ Task0 test accuracy on 11 items: 0.9396	0.9382	0.9388	0.9386	0.9377	0.9400	0.940
 ```
 Like in the previous case, the last element (0.9395) is the Q-MTL prediction, the other ones are 
 the individual tasks (trained on the same dataset).
+
+## Note for Windows users
+The .conllu files will be converted to CRLF format, this needs to be converted to LF for the parser to recognise it 
+(one easy way to do it is by changing the file ending in notepad++).
